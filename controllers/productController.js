@@ -74,7 +74,7 @@ const updateProductPatch = (req, res) => {
 
 const deleteProduct = (req,res) => {
     const{id} = req.params;
-    db.query('DELETE FROM Products WHERE id = ?',[id],
+    db.query('DELETE FROM Product WHERE id = ?',[id],
         (err, results) => {
             if(err) {
                 console.error('erro ao adicionar produto', err);

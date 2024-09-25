@@ -1,0 +1,29 @@
+body {
+    background-color: indigo;
+}
+
+.products {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+
+.products img {
+    width: 80%;
+    margin: 10px;
+    border-radius: 10px; 
+}
+
+.product-image {
+    box-shadow: 3px 3px 8px black;
+}
+
+.button {
+    background-color: limegreen;
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px 50px;
+}
