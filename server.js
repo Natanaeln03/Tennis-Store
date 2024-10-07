@@ -22,7 +22,7 @@ app.use('/product', productRoutes);
 app.use('auth/', authRoutes)
 
 app.get('/', (req, res) => {
-    res.send(`Servidor está rodando na porta ${PORT}`); 
+
 });
 
 

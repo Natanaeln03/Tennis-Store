@@ -22,7 +22,7 @@ const registerUser = async (req, res) => {
 
  // Inserir o novo usuário no banco de dados 
  await db.promise().query( 
- 'INSERT INTO users (name, email, password) VALUES (?, ?, ?, ?)', 
+ 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)', 
  [name, email, hashedPassword] 
  ); 
  res.status(201).send('Usuário registrado com sucesso'); 
