@@ -11,8 +11,7 @@ const registerUser = async (req, res) => {
 
  // Verificar se o usuário já existe no banco de dados 
  try { 
- const [existingUser] = await db.promise().query('SELECT * FROM users WHERE email = ?', 
-[email]); 
+ const [existingUser] = await db.promise().query('SELECT * FROM users WHERE email = ?', [email]); 
  if (existingUser.length > 0) { 
  return res.status(400).send('Usuário já registrado'); 
  } 
@@ -71,7 +70,7 @@ const requestPasswordReset = async (req, res) => {
     const expireDate = new Date(Date.now() + 3600000); 
     await db.promise().query('UPDATE users SET reset_password_token = ?, reset_password_expires = ? WHERE email = ?', [token, expireDate, email]);
     const resetLink = `http://localhost:3000/reset-password/${token}`; 
-    sendEmail(email, 'Recuperação de Senha - Sistema de Gerenciamento Finance SENAI', `Por favor, clique no link para redefinir sua
+    sendEmail(email, 'Recuperação de Senha', `Por favor, clique no link para redefinir sua
    senha: ${resetLink}`);
     res.send('E-mail de recuperação de senha enviado');
     } catch (err) {

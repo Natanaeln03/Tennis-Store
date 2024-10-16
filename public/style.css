@@ -8,12 +8,15 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 10px;
+    
 }
 
 .products img {
     width: 80%;
     margin: 10px;
     border-radius: 10px; 
+    padding: 20px;
+    background-color: darkcyan;
 }
 
 .product-image {
@@ -26,14 +29,4 @@ body {
     border-radius: 5px;
     font-size: 20px;
     padding: 3px 50px;
-}
-
-.form {
-    background-color: rgb(238, 230, 230);
-    padding: 30px;
-    max-width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
 }
