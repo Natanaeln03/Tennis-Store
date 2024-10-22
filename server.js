@@ -17,9 +17,9 @@ const app = express();
 app.use(cors()); 
 app.use(bodyParser.json()); 
 
-app.use('/product', productRoutes); 
+app.use('/api/product', productRoutes); 
 
-app.use('auth/', authRoutes)
+app.use('/api/auth', authRoutes)
 
 app.get('/', (req, res) => {
 
